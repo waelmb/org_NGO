@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $color-text;
+}
+header {
+  color: white;
+}
+footer {
+  color: white;
+  text-align: center;
+}
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+#overview h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: $color-yellow;
+  font-size: 3em;
+}
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+h2{
+  color: $color-yellow;
+}

@@ -1,0 +1,120 @@
+.map svg{
+  display: none;
+  overflow: hidden;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+.map h2,
+.map h3,
+.map p {
+  width: 88%;
+  margin: 1em auto;
+}
+.lb-content p {
+  margin-bottom: 2em;
+}
+.sa-content,
+.ae-content,
+.om-content,
+.ye-content,
+.ilps-content,
+.jo-content,
+.eg-content,
+.sy-content,
+.lb-content {
+  transition: 0s;
+}
+
+@media screen and (min-width: $min-desktop-width) {
+  .map {
+    position:relative;
+  }
+  .map svg {
+    display: block;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+    width: auto;
+    margin-bottom: 2em;
+    margin-right: 15em;
+    max-width: 1200px;
+    position:relative;
+    max-height: 70vh;
+  }
+  .map-box {
+    // position:relative;
+    background: $color-yellow;
+    box-shadow: 0px 0px 25px 10px rgba(50, 50, 50, .5);    border-radius: 20px;
+    padding: .2em .5em .5em 1em;
+    min-width:580px;
+    min-height:80px;
+    color: rgba(120, 120, 120, 1);
+  }
+  .map-box h3 {
+    margin: .5em;
+  }
+  // .map-box-arrow {
+  //   position:absolute;
+  //   bottom:-30px;
+  //   left:30px;
+  //   background: url(../images/arrow.svg);
+  //   background-size: cover;
+  //   transform: rotate(270deg);
+  //   width:20px;
+  //   height:60px;
+  //   // border: 30px solid;
+  //   // border-color: red white white white;
+  // }
+  .sa-content,
+  .ae-content,
+  .om-content,
+  .ye-content,
+  .ilps-content,
+  .jo-content,
+  .eg-content,
+  .sy-content,
+  .lb-content {
+    position:absolute;
+    transition: 0s;
+    opacity:0;
+    height: 1px;
+    width: 1px;
+  }
+  .sa-content {
+    top: 3%;
+    left: 45%;
+  }
+  .ae-content {
+    top: 6%;
+    left: 44%;
+  }
+  .om-content {
+    top: 6%;
+    left: 44%;
+  }
+  .ye-content {
+    top: 6%;
+    left: 43%;
+  }
+  .ilps-content {
+    top: 6%;
+    left: 43%;
+  }
+  .jo-content {
+    top: 6%;
+    left: 43%;
+  }
+  .eg-content {
+    top: 6%;
+    left: 43%;
+  }
+  .sy-content {
+    top: 6%;
+    left: 43%;
+  }
+  .lb-content {
+    top: 6%;
+    left: 43%;
+  }
+}
