@@ -525,7 +525,6 @@ img {
   .map-box {
     position: relative;
     background: #ffcb1b;
-    box-shadow: 2px 2px 5px 1px rgba(50, 50, 50, 0.5);
     border-radius: 20px;
     padding: .2em .5em .5em 1em;
     min-width: 580px;
@@ -536,15 +535,32 @@ img {
   .map-box h3 {
     margin: .5em; }
 
-  .map-box-arrow {
+  .map-box-arrow-sa,
+  .map-box-arrow-ae,
+  .map-box-arrow-om,
+  .map-box-arrow-ye,
+  .map-box-arrow-ilps,
+  .map-box-arrow-jo,
+  .map-box-arrow-eg,
+  .map-box-arrow-sy,
+  .map-box-arrow-lb {
     z-index: 1002;
     position: absolute;
-    bottom: -292px;
-    left: 90px;
     background: url(../images/arrow.svg);
     background-size: cover;
+    filter: drop-shadow(-5px -5px 2px rgba(50, 50, 50, 0.5)); }
+
+  .map-box-arrow-sa {
+    bottom: -292px;
+    left: 90px;
     transform: rotate(270deg);
-    filter: drop-shadow(-5px -5px 2px rgba(50, 50, 50, 0.5));
+    width: 60px;
+    height: 180px; }
+
+  .map-box-arrow-ae {
+    bottom: -292px;
+    left: 90px;
+    transform: rotate(270deg);
     width: 60px;
     height: 180px; }
 
