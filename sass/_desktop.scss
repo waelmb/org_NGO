@@ -1,32 +1,11 @@
 /* Desktop styling
 *******************************    */
 @media screen and (min-width: $min-desktop-width) {
-  #overview,
-  #challenges,
-  #numbers,
-  #action {
-    background: none;
-  }
-  .parallax,
-  .parallax2,
-  .parallax3,
-  .parallax4 {
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 10% 50%;
-  }
   .parallax {
     background-image: url(../images/al-background-img2.jpg);
-  }
-  .parallax2 {
-
-  }
-  .parallax3 {
-    background-image: url(../images/dark-triangles.png);
   }
   .parallax4 {
     background-image: url(../images/al-background-img3.jpg);
     padding-bottom: 1px;
   }
-}
+ }
