@@ -41,12 +41,8 @@ h5, h6 {
 p {
   line-height: 1.5; }
 
-header {
-  background: rgba(0, 0, 0, 0.8);
-  width: 100%; }
-
 footer {
-  background: rgba(0, 0, 0, 0.875);
+  background: #191919;
   margin: 0;
   padding: .1em 0;
   color: white;
@@ -56,53 +52,25 @@ footer {
 .wrapper {
   padding: 0; }
 
-/* Header Stuff
+/* Intro & Overview Layout
 ---------------------------------*/
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  transition: 1s; }
-
-header {
-  display: flex; }
-
-header h1 {
-  color: transparent;
-  max-width: 250px;
-  margin: 0 0 0 4em; }
-
-.logo {
-  margin-left: 3em;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  z-index: 101; }
-
-.logo img {
-  margin: 0;
-  padding: 0;
-  opacity: 0.95;
-  box-shadow: 2px 2px 17px rgba(73, 73, 73, 0.7);
-  border-radius: 2.5px; }
-
-/* Overview
----------------------------------*/
+#intro,
 #overview,
 #challenges,
 #numbers,
 #action,
 .layer_action {
-  min-height: 100.1vh; }
+  min-height: 110vh; }
 
-#overview h1 {
+#intro h1 {
   margin-top: 3em; }
 
+#overview h2,
 #challenges h2,
 #action h2 {
   margin-top: 5em; }
 
+.intro,
 .overview {
   width: 100%;
   margin: 0 auto; }
@@ -114,24 +82,29 @@ header h1 {
 
 /* Parallax
 ---------------------------------*/
+.parallax_intro,
 .parallax,
 .parallax2,
 .parallax3,
 .parallax4 {
-  min-height: 100vh;
+  min-height: 110vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 50%; }
 
+.parallax_intro {
+  background-image: url(../images/al-background-img2-mobile.jpg);
+  padding-top: .1em;
+  padding-bottom: .1em; }
+
 .parallax {
-  background-image: url(../images/al-background-img2-mobile.jpg); }
+  background-image: url(../images/al-background-img1.jpg); }
 
 .parallax2 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100vh; }
+  width: 100%; }
 
 .parallax3 {
   background-image: url(../images/dark-triangles.png);
@@ -141,11 +114,29 @@ header h1 {
   background-image: url(../images/al-background-img3-mobile.jpg);
   padding-bottom: 1px; }
 
-.box {
-  margin-top: 100vh;
+.box-top {
   position: absolute;
   z-index: 1001;
   width: 100%; }
+
+.box-bottom {
+  margin-top: 330vh;
+  position: absolute;
+  z-index: 1001;
+  width: 100%; }
+
+/* Intro styling
+---------------------------------*/
+#intro {
+  width: 100%;
+  margin: 0;
+  z-index: 1001; }
+
+@media screen and (min-width: 768px) {
+  .parallax_intro {
+    background-image: url(../images/al-background-img2-tablet.jpg); } }
+.intro {
+  padding-top: 5em; }
 
 /* Overview styling
 ---------------------------------*/
@@ -155,28 +146,17 @@ header h1 {
   position: absolute;
   z-index: 1001; }
 
-@media screen and (min-width: 768px) {
-  .parallax {
-    background: url(../images/al-background-img2-tablet.jpg);
-    background-size: cover;
-    margin: 0;
-    width: 100%; } }
 .layer_overview {
   background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100.1vh;
+  min-height: 110vh;
   padding-top: .1em;
   padding-bottom: 2em; }
 
 .layer_overview p {
   margin: 1em 3em 0em 3em; }
 
-.layer_overview h2,
-.layer_overview h1 {
+.layer_overview h2 {
   text-align: center; }
-
-.layer_overview h1 {
-  margin: 0;
-  line-height: 1.5; }
 
 .overview_list_title {
   display: flex;
@@ -268,6 +248,9 @@ header h1 {
 .numbers h2 {
   margin-top: 2em; }
 
+.donate {
+  font-size: 1.5em; }
+
 /* Action styling
 ---------------------------------*/
 #action {
@@ -276,26 +259,21 @@ header h1 {
 
 @media screen and (min-width: 768px) {
   .parallax4 {
-    background: url(../images/al-background-img3-tablet.jpg);
-    background-size: cover;
-    margin: 0;
-    width: 100%; } }
+    background-image: url(../images/al-background-img3-tablet.jpg); } }
 .layer_action {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  width: 40%;
-  margin-left: 3em; }
+  width: 45%;
+  padding-bottom: 1px; }
 
 .layer_action h2 {
-  text-align: center; }
+  text-align: center;
+  margin: auto .5em; }
 
-@media screen and (min-width: 1200px) {
-  .overview_list li {
-    display: inline-block;
-    margin-left: 6em; } }
 body {
   font-family: 'Open Sans', sans-serif;
-  color: white; }
+  color: white;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black; }
 
 header {
   color: white; }
@@ -308,11 +286,20 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
 
-#overview h1 {
+#intro h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #ffcb1b;
-  font-size: 3em; }
+  font-size: 4.5em;
+  text-align: center;
+  margin: 0;
+  line-height: 2; }
+
+#intro p {
+  margin: .5em 1em;
+  font-size: 1.5em;
+  color: #ffcb1b;
+  text-align: center; }
 
 h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
@@ -321,6 +308,26 @@ h2, h3, h4, h5, h6 {
 h2 {
   color: #ffcb1b; }
 
+@media screen and (min-width: 768px) {
+  #intro h1 {
+    font-size: 3em; } }
+@media screen and (min-width: 1200px) {
+  .intro {
+    padding-top: 15em;
+    margin: 0;
+    width: 30%; }
+
+  #intro h1,
+  #intro p {
+    margin: 0; }
+
+  #intro h1 {
+    font-size: 4em;
+    line-height: 1.5; }
+
+  #intro p {
+    margin: 1em 0em;
+    padding: 0em 1em; } }
 a {
   text-decoration: none; }
 
@@ -329,13 +336,32 @@ a:visited {
 
 /* Desktop styling
 *******************************    */
+@media screen and (min-width: 768px) {
+  .box-bottom {
+    margin-top: 275vh; }
+
+  .layer_action {
+    width: 35%; } }
 @media screen and (min-width: 1200px) {
-  .parallax {
+  .overview_list li {
+    display: inline-block;
+    margin-left: 6em; }
+
+  .layer_action {
+    width: 30%; }
+
+  .parallax_intro {
     background-image: url(../images/al-background-img2.jpg); }
+
+  .parallax {
+    background-image: url(../images/al-background-img1.jpg); }
 
   .parallax4 {
     background-image: url(../images/al-background-img3.jpg);
-    padding-bottom: 1px; } }
+    padding-bottom: 1px; }
+
+  .box-bottom {
+    margin-top: 220vh; } }
 /*! Flickity v1.2.1
 http://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -482,7 +508,8 @@ img {
 .map h3,
 .map p {
   width: 88%;
-  margin: 1em auto; }
+  margin: 1em auto;
+  text-shadow: none; }
 
 .lb-content p {
   margin-bottom: 2em; }
@@ -534,35 +561,6 @@ img {
 
   .map-box h3 {
     margin: .5em; }
-
-  .map-box-arrow-sa,
-  .map-box-arrow-ae,
-  .map-box-arrow-om,
-  .map-box-arrow-ye,
-  .map-box-arrow-ilps,
-  .map-box-arrow-jo,
-  .map-box-arrow-eg,
-  .map-box-arrow-sy,
-  .map-box-arrow-lb {
-    z-index: 1002;
-    position: absolute;
-    background: url(../images/arrow.svg);
-    background-size: cover;
-    filter: drop-shadow(-5px -5px 2px rgba(50, 50, 50, 0.5)); }
-
-  .map-box-arrow-sa {
-    bottom: -292px;
-    left: 90px;
-    transform: rotate(270deg);
-    width: 60px;
-    height: 180px; }
-
-  .map-box-arrow-ae {
-    bottom: -292px;
-    left: 90px;
-    transform: rotate(270deg);
-    width: 60px;
-    height: 180px; }
 
   .sa-content,
   .ae-content,

@@ -42,13 +42,9 @@ h5, h6 {
 p {
   line-height: 1.5;
 }
-header {
-  background: rgba(0, 0, 0, 0.8);
-  width: 100%;
-}
 
 footer {
-  background: rgba(0, 0, 0, .875);
+  background: rgba(25, 25, 25, 1);
   margin: 0;
   padding: .1em 0;
   color: white;
@@ -63,56 +59,26 @@ footer {
   padding: 0;
 }
 
-/* Header Stuff
+/* Intro & Overview Layout
 ---------------------------------*/
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  transition: 1s;
-}
-header {
-  display: flex;
-}
-header h1 {
-  color: rgba(0, 0, 0, 0);
-  max-width: 250px;
-  margin: 0 0 0 4em;
-}
-.logo {
-  margin-left: 3em;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  z-index: 101;
-}
-.logo img {
-  margin: 0;
-  padding: 0;
-  opacity: 0.95;
-  box-shadow: 2px 2px 17px rgba(73, 73, 73, 0.7);
-  border-radius: 2.5px;
-}
-
-/* Overview
----------------------------------*/
-
+#intro,
 #overview,
 #challenges,
 #numbers,
 #action,
 .layer_action {
-  min-height: 100.1vh;
+  min-height: 110vh;
 }
-#overview h1 {
+#intro h1 {
   margin-top: 3em;
 }
+#overview h2,
 #challenges h2,
 // #numbers h2,
 #action h2{
   margin-top: 5em;
 }
+.intro,
 .overview {
   width: 100%;
   margin: 0 auto;
@@ -127,24 +93,29 @@ header h1 {
 
 /* Parallax
 ---------------------------------*/
+.parallax_intro,
 .parallax,
 .parallax2,
 .parallax3,
 .parallax4 {
-  min-height: 100vh;
+  min-height: 110vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 50%;
 }
+.parallax_intro {
+    background-image: url(../images/al-background-img2-mobile.jpg);
+    padding-top: .1em;
+    padding-bottom: .1em;
+}
 .parallax {
-  background-image: url(../images/al-background-img2-mobile.jpg);
+    background-image: url(../images/al-background-img1.jpg);
 }
 .parallax2 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
 }
 .parallax3 {
   background-image: url(../images/dark-triangles.png);
@@ -154,11 +125,32 @@ header h1 {
   background-image: url(../images/al-background-img3-mobile.jpg);
   padding-bottom: 1px;
 }
-.box {
-  margin-top: 100vh;
+.box-top {
   position: absolute;
   z-index: 1001;
   width: 100%;
+}
+.box-bottom {
+  margin-top: 330vh;
+  position: absolute;
+  z-index: 1001;
+  width: 100%;
+}
+
+/* Intro styling
+---------------------------------*/
+#intro {
+  width: 100%;
+  margin: 0;
+  z-index: 1001;
+}
+@media screen and (min-width: $min-tablet-width) {
+  .parallax_intro {
+    background-image: url(../images/al-background-img2-tablet.jpg);
+  }
+}
+.intro {
+  padding-top: 5em;
 }
 
 /* Overview styling
@@ -169,17 +161,10 @@ header h1 {
   position: absolute;
   z-index: 1001;
 }
-@media screen and (min-width: $min-tablet-width) {
-  .parallax {
-    background: url(../images/al-background-img2-tablet.jpg);
-    background-size: cover;
-    margin: 0;
-    width: 100%;
-  }
-}
+
 .layer_overview {
   background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100.1vh;
+  min-height: 110vh;
   padding-top: .1em;
   padding-bottom: 2em;
 }
@@ -187,13 +172,9 @@ header h1 {
 {
   margin: 1em 3em 0em 3em;
 }
-.layer_overview h2,
-.layer_overview h1 {
+.layer_overview h2
+{
   text-align: center;
-}
-.layer_overview h1 {
-  margin: 0;
-  line-height: 1.5;
 }
 .overview_list_title {
   display: flex;
@@ -285,6 +266,9 @@ header h1 {
 .numbers h2 {
   margin-top: 2em;
 }
+.donate {
+  font-size: 1.5em;
+}
 
 
 /* Action styling
@@ -295,25 +279,16 @@ header h1 {
 }
 @media screen and (min-width: $min-tablet-width) {
   .parallax4 {
-    background: url(../images/al-background-img3-tablet.jpg);
-    background-size: cover;
-    margin: 0;
-    width: 100%;
+    background-image: url(../images/al-background-img3-tablet.jpg);
   }
 }
 .layer_action {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  width: 40%;
-  margin-left: 3em;
+  width: 45%;
+  padding-bottom: 1px;
 }
 .layer_action h2  {
   text-align: center;
-}
-
-@media screen and (min-width: $min-desktop-width) {
-  .overview_list li {
-    display: inline-block;
-    margin-left: 6em;
-  }
+  margin: auto .5em;
 }

@@ -1,11 +1,32 @@
 /* Desktop styling
 *******************************    */
+@media screen and (min-width: $min-tablet-width) {
+  .box-bottom {
+    margin-top: 275vh;
+  }
+  .layer_action {
+    width: 35%;
+  }
+}
 @media screen and (min-width: $min-desktop-width) {
-  .parallax {
+  .overview_list li {
+    display: inline-block;
+    margin-left: 6em;
+  }
+  .layer_action {
+    width: 30%;
+  }
+  .parallax_intro {
     background-image: url(../images/al-background-img2.jpg);
+  }
+  .parallax {
+    background-image: url(../images/al-background-img1.jpg);
   }
   .parallax4 {
     background-image: url(../images/al-background-img3.jpg);
     padding-bottom: 1px;
+  }
+  .box-bottom {
+    margin-top: 220vh;
   }
  }
